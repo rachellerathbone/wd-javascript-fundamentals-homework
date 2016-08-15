@@ -9,6 +9,7 @@ function bigSum() {
   // YOUR CODE HERE
 }
 
+console.log(bigSum);
 // Define a function named pluck that takes in two arguments.
 //     arr (array of objects)
 //     key (string)
@@ -23,8 +24,15 @@ function bigSum() {
 //    ]
 //
 // and the key 'name', then return ['moe', 'larry', 'curly'].
+function pluck(arr, key) {
+    var newArray = [];
 
+    newArray.push(arr[0].name + ', ' + arr[1].name + ', ' + arr[2].name);
 
+    return newArray;
+}
+
+console.log(pluck([{ name: 'moe', age: 40}, {name: 'larry', age: 50}, {name: 'curly', age: 60}], 'name'));
 
 
 // Define a function named pick that takes in two arguments.
@@ -34,9 +42,11 @@ function bigSum() {
 // Return a new object that contains only the specified keys. For example, given
 // { name: 'moe', age: 50, id: 1 } and ['name', 'age'], then return
 // { name: 'moe', age: 50 }.
+function pick(obj, keys) {
+  return obj;
+}
 
-
-
+console.log(pick({ name: 'Moe', age: 50, id: 1}, ['name', 'age']));
 
 // Define a function named merge that takes in two arguments.
 //    arr1 (array of sorted numbers)
