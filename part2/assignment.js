@@ -1,4 +1,4 @@
-/* Define a function named sum that takes in one argument.
+// Define a function named sum that takes in one argument.
 //    arr (array of numbers)
 //
 // Return the sum of all of the numbers in the array. For example, given
@@ -13,7 +13,7 @@ function sum(arr) {
   return sum;
 }
 
-console.log(sum([1, 2, 3, 4]));
+//console.log(sum([1, 2, 3, 4]));
 
 // Define a function named product that takes in one argument.
 //    arr (array of numbers)
@@ -31,7 +31,7 @@ function product(arr) {
   return product;
 }
 
-console.log(product([1, 2, 3, 4]));
+//console.log(product([1, 2, 3, 4]));
 
 // Define a function named concatenate that takes in one argument.
 //    arr (array of strings)
@@ -43,7 +43,7 @@ function concatenate(arr) {
   return arr.join('');
 }
 
-console.log(concatenate(['hello', 'my', 'name', 'is', 'ken']));
+//console.log(concatenate(['hello', 'my', 'name', 'is', 'ken']));
 
 // Define a function named repeat that takes in two arguments.
 //     str (string)
@@ -55,7 +55,7 @@ function repeat(str, times) {
      return str.repeat(times);
 }
 
-console.log(repeat('hi', 4));
+//console.log(repeat('hi', 4));
 
 // Define a function named filterPassingGrades that takes in one argument.
 //     grades (array of numbers)
@@ -74,7 +74,7 @@ function filterPassingGrades(grades) {
 
 }
 
-console.log(filterPassingGrades([88, 67, 70, 92, 53]));
+//console.log(filterPassingGrades([88, 67, 70, 92, 53]));
 
 
 // Define a function named replace that takes in three arguments.
@@ -101,7 +101,7 @@ function replace(arr, from, to) {
   return newArray;
 }
 
-console.log(replace([1, 3, 2, 1, 3], 1, 4));
+//console.log(replace([1, 3, 2, 1, 3], 1, 4));
 
 
 // Define a function named flatten that takes in one argument.
@@ -119,7 +119,7 @@ function flatten(arr) {
   return newArray;
 }
 
-console.log(flatten([[1], [2, 3], [4]]));
+//console.log(flatten([[1], [2, 3], [4]]));
 
 
 // Define a function named max that takes in one argument.
@@ -133,7 +133,7 @@ function max(arr) {
   return Math.max.apply(Math, arr);
 }
 
-console.log(max([1, 20, -3, 4]));
+//console.log(max([1, 20, -3, 4]));
 
 
 // Define a function named min that takes in one argument.
@@ -147,7 +147,7 @@ function min(arr) {
   return Math.min.apply(Math, arr);
 }
 
-console.log(min([1, 2, -3, 4]));
+//console.log(min([1, 2, -3, 4]));
 
 
 
@@ -172,7 +172,7 @@ function mean(arr) {
     return sum / arr.length;
 
 }
-console.log(mean([]));
+//console.log(mean([]));
 
 
 // Define a function named median that takes in one argument.
@@ -210,7 +210,7 @@ function median (arr) {
     }
 }
 
-console.log(median([1, 2, 3, 4]));
+//console.log(median([1, 2, 3, 4]));
 
 
 // Define a function named contains that takes in two arguments.
@@ -228,7 +228,7 @@ function contains(arr, str) {
   return false;
 }
 
-console.log(contains(['cat', 'dog', 'bear'], 'bears'));
+//console.log(contains(['cat', 'dog', 'bear'], 'bears'));
 
 
 // Define a function named distance that takes in two arguments.
@@ -249,7 +249,7 @@ function distance(point1, point2) {
     return calculateDistance;
 }
 
-console.log(distance({ x: 3, y: 2}, { x: 9, y: 7}));
+//console.log(distance({ x: 3, y: 2}, { x: 9, y: 7}));
 
 
 // Define a function named combine that takes in two arguments.
@@ -266,7 +266,7 @@ function combine(obj1, obj2) {
     return newObject;
 }
 
-console.log(combine({b: 1}, {b: 2}));
+//console.log(combine({b: 1}, {b: 2}));
 
 // Define a function called invert that takes in one argument.
 //    obj (object)
@@ -283,7 +283,7 @@ function invert(obj) {
   return invertKeyValuePairs;
 }
 
-console.log(invert({a: 1, b: 2}));*/
+//console.log(invert({a: 1, b: 2}));
 
 
 // Define a function named values that takes in one argument.
@@ -303,7 +303,7 @@ function values(obj) {
   return newArray;
 }
 
-console.log(values({ a: 1, b: 2, c: 3}));
+//console.log(values({ a: 1, b: 2, c: 3}));
 
 // Define a function called toPairs that takes in one argument.
 //    obj (object)
@@ -324,7 +324,7 @@ function toPairs(obj) {
   return newArray;
 }
 
-console.log(toPairs({ a: 1, b: 2 }));
+//console.log(toPairs({ a: 1, b: 2 }));
 
 // Define a function called fromPairs that takes in one argument.
 //    arr (array)
@@ -334,8 +334,11 @@ console.log(toPairs({ a: 1, b: 2 }));
 // { a: 1, b: 2 }.
 function fromPairs(arr) {
   var newObject = {};
-
-
+  for (var i = 0; i < arr.length; i++) {
+    //console.log(arr);
+    newObject[arr[i][0]] = arr[i][1];
+  }
+  return newObject;
 }
 
-console.log(fromPairs(['a', 1], ['b', 2]));
+console.log(fromPairs([['a', 1], ['b', 2]]));

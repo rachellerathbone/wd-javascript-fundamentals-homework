@@ -5,8 +5,13 @@
 // then return 10. If there are no arguments, return 0.
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments
-function bigSum() {
+function bigSum(input) {
   // YOUR CODE HERE
+
+  if (input === null || typeof input === 'undefined' || input.length === 0) {
+    return 0;
+  }
+
 }
 
 console.log(bigSum);
