@@ -7,7 +7,7 @@ function sum(a, b) {
   return a + b;
 }
 
-console.log(sum(2, 3));
+//console.log(sum(2, 3));
 
 // Define a function named product that takes two arguments
 //    a (number)
@@ -18,7 +18,7 @@ function product(a, b) {
   return a * b;
 }
 
-console.log(product(3, 4));
+//console.log(product(3, 4));
 
 // Define a function named sumAndProduct that takes three arguments
 //    x (number)
@@ -33,7 +33,7 @@ function sumAndProduct(x, y, z) {
   return (x + y) * z;
 }
 
-console.log(sumAndProduct(3, 4, 5));
+//console.log(sumAndProduct(3, 4, 5));
 
 // Define a function named roundUp that takes one argument
 //    decimal (number)
@@ -45,7 +45,7 @@ function roundUp(decimal) {
   return Math.ceil(decimal);
 }
 
-console.log(roundUp(1.9));
+//console.log(roundUp(1.9));
 
 
 // Define a function named toFahrenheit that takes one argument
@@ -59,7 +59,7 @@ function toFahrenheit(celcius) {
   return Math.round(celcius * 1.8 + constant);
 }
 
-console.log(toFahrenheit(30));
+//console.log(toFahrenheit(30));
 
 // Define a function named areaOfCircle that takes one argument
 //    radius (number)
@@ -70,9 +70,10 @@ console.log(toFahrenheit(30));
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/PI
 function areaOfCircle(radius) {
   return Math.PI * Math.pow(radius, 2);
+  // ES6 return Math.PI * (radius ** 2);
 }
 
-console.log(areaOfCircle(20));
+//console.log(areaOfCircle(20));
 
 // Define a function named areaOfRing that takes two arguments
 //    outerRadius (number)
@@ -82,9 +83,11 @@ console.log(areaOfCircle(20));
 // the formula.
 function areaOfRing(outerRadius, innerRadius) {
   return Math.PI * (Math.pow(outerRadius, 2) - Math.pow(innerRadius, 2));
+  // below line of code calls the above function, meaning I don't need to write the formula again.
+  // return areaOfCircle(outerRadius) - areaOfCircle(innerRadius);
 }
 
-console.log(areaOfRing(10, 7));
+//console.log(areaOfRing(10, 7));
 // Define a function named greet that takes 2 arguments
 //    firstName (string)
 //    lastName (string)
@@ -113,14 +116,14 @@ console.log(greet('Rachelle', 'Rathbone'));
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#String_operators
 function toSentence(word1, word2, word3, oxfordComma) {
-  if (oxfordComma === true) {
-    return word1 + ', ' + word2 + ', and ' + word3 + '.'
+  if (oxfordComma) {
+    return word1 + ', ' + word2 + ', and ' + word3 + '.';
   } else {
-    return word1 + ', ' + word2 + ' and ' + word3 + '.'
+    return word1 + ', ' + word2 + ' and ' + word3 + '.';
   }
 }
-console.log(toSentence('Red', 'Blue', 'Green', true));
-console.log(toSentence('Red', 'Blue', 'Green', 1));
+// console.log(toSentence('Red', 'Blue', 'Green', true));
+// console.log(toSentence('Red', 'Blue', 'Green', 1));
 // Define a function named toRoman that takes one argument
 //    arabic (number)
 //
@@ -134,11 +137,14 @@ console.log(toSentence('Red', 'Blue', 'Green', 1));
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#switch_statement
 
 function toRoman(arabic) {
+  // alt way: create an array
+  // var romanNumbers = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X']
   if(arabic < 1) {
     return null;
   } else if (arabic > 10) {
     return null;
   } else {
+    // return romanNumbers[arabic - 1]
     switch(arabic) {
       case 1: return 'I'
       break;
@@ -560,7 +566,7 @@ function calculateTaxRate(salary, status) {
     return '10%';
     } else {
       return '15%';
-    } 
+    }
   }
 
   // if we have reached this section, status is joint.
