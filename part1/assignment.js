@@ -136,15 +136,22 @@ function toSentence(word1, word2, word3, oxfordComma) {
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#switch_statement
 
+// alt way: create an array
+//function toRoman(arabic) {
+// if (arabic < 1 || arabic > 10) {
+  // return null;
+//}
+
+// var romanNumbers = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X']
+// return romanNumbers[arabic - 1]
+//}
 function toRoman(arabic) {
-  // alt way: create an array
-  // var romanNumbers = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X']
+
   if(arabic < 1) {
     return null;
   } else if (arabic > 10) {
     return null;
   } else {
-    // return romanNumbers[arabic - 1]
     switch(arabic) {
       case 1: return 'I'
       break;
@@ -170,7 +177,7 @@ function toRoman(arabic) {
   }
 }
 
-console.log(toRoman(6));
+//console.log(toRoman(6));
 
 // Define a function toDolla that takes one argument
 //    amount (number)
@@ -182,6 +189,8 @@ console.log(toRoman(6));
 function toDolla(amount) {
   return '$' + amount.toFixed(2);
 }
+
+console.log(toDolla(2));
 
 
 // Define a function named percentage that takes two arguments
@@ -217,7 +226,6 @@ function isStrictlyEqual(value1, value2) {
     return false;
   }
 }
-
 
 // Define a function named isLooselyEqual that takes two arguments
 //    value1 (anything)
@@ -313,7 +321,7 @@ function isVowel(string) {
   }
 }
 
-console.log(isVowel('e'));
+//console.log(isVowel('e'));
 
 // Define a function named largestOfThree which takes three arguments
 //    value1 (number)
